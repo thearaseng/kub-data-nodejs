@@ -32,4 +32,8 @@ app.post('/story', (req, res) => {
   });
 });
 
+app.post('/story', (req, res) => {
+  process.exit(1);
+});
+
 app.listen(3000);
