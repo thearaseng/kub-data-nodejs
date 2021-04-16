@@ -17,7 +17,11 @@ spec:
           image: thearaseng/kub-data-demo:0.0.4
           env:
             - name: STORY_FOLDER
-              value: 'story'
+              # value: 'story'
+              valueFrom:
+                configMapKeyRef:
+                  name: data-store-env
+                  key: folder
           volumeMounts:
             - name: story-volume
               mountPath: /app/story
