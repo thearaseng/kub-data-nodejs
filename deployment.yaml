@@ -14,7 +14,10 @@ spec:
     spec:
       containers:
         - name: story
-          image: thearaseng/kub-data-demo:0.0.3
+          image: thearaseng/kub-data-demo:0.0.4
+          env:
+            - name: STORY_FOLDER
+              value: 'story'
           volumeMounts:
             - name: story-volume
               mountPath: /app/story
